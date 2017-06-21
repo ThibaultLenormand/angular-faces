@@ -1,14 +1,14 @@
-import { AngularFacesPage } from './app.po';
+import { CentralizedLoginPage } from './app.po';
 
-describe('angular-faces App', () => {
-  let page: AngularFacesPage;
+describe('centralized-login App', () => {
+  let page: CentralizedLoginPage;
 
   beforeEach(() => {
-    page = new AngularFacesPage();
+    page = new CentralizedLoginPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });
