@@ -13,7 +13,9 @@ import { ROUTES } from './facepp.routes';
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule.forRoot(ROUTES, { useHash: true })
+        RouterModule.forRoot(ROUTES),
+        FaceModule,
+        FacesetModule
     ],
     declarations: [DetectComponent, CompareComponent, SearchComponent]
 })
