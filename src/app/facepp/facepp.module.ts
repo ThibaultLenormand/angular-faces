@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FacesetModule } from './module/faceset/faceset.module';
-import { FaceModule } from './module/faceset/face.module';
+import { FaceModule } from './module/face/face.module';
 
 import { DetectComponent } from './component/detect/detect.component';
 import { CompareComponent } from './component/compare/compare.component';
