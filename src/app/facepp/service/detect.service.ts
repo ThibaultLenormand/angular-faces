@@ -13,7 +13,14 @@ export class DetectService {
         
     }
     
+    public detect(url){
+        console.log('detect api');
+    }
+    
+    
+    /*
     public detect(url: string): Observable<Jsonp> {
+        
         let headers = new Headers({ 'Content-Type': 'application/json' });
         
         let route = this.configuration.getDetectApi();
@@ -29,6 +36,7 @@ export class DetectService {
         return this.http.post(route, request)
             .map(this.extractData)
             .catch(this.handleError);
+        
     }
     
     private extractData(res: Response) {
@@ -48,4 +56,5 @@ export class DetectService {
         console.error(errMsg);
         return Observable.throw(errMsg);
     }
+    */
 }

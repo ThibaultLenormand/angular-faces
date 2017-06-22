@@ -14,9 +14,7 @@ export class DetectComponent implements OnInit {
     }
     
     send(url: string){
-        this.detectService.detect(url)
-            .subscribe()
-        ;
+        this.detectService.detect(url);
     }
 
     ngOnInit() {
