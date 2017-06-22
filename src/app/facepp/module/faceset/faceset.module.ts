@@ -6,11 +6,12 @@ import { FacesetRemoveFaceComponent } from './component/faceset-remove-face/face
 import { FacesetUpdateComponent } from './component/faceset-update/faceset-update.component';
 import { FacesetGetDetailComponent } from './component/faceset-get-detail/faceset-get-detail.component';
 import { FacesetDeleteComponent } from './component/faceset-delete/faceset-delete.component';
+import { FacesetGetFaceSetsComponent } from './component/faceset-get-face-sets/faceset-get-face-sets.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [FacesetCreateComponent, FacesetAddFaceComponent, FacesetRemoveFaceComponent, FacesetUpdateComponent, FacesetGetDetailComponent, FacesetDeleteComponent]
+  declarations: [FacesetCreateComponent, FacesetAddFaceComponent, FacesetRemoveFaceComponent, FacesetUpdateComponent, FacesetGetDetailComponent, FacesetDeleteComponent, FacesetGetFaceSetsComponent]
 })
 export class FacesetModule { }
