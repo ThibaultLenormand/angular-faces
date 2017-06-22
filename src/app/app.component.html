@@ -1,45 +1,3 @@
-
-<!--
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Angular Faces</a>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a routerLink="/">Home</a></li>
-                <li [routerLinkActive]="['active']"><a routerLink="detect">Detect</a></li>
-                <li [routerLinkActive]="['active']"><a routerLink="compare">Compare</a></li>
-                <li [routerLinkActive]="['active']"><a routerLink="search">Search</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Faceset <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li [routerLinkActive]="['active']"><a routerLink="faceset/list">List</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="faceset/create">Create</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="faceset/addface">Add Face</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="faceset/remove">Remove Face</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="faceset/update">Update</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="faceset/details">Details</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="faceset/delete">Delete</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Face <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li [routerLinkActive]="['active']"><a routerLink="face/analyze">Analyze</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="face/details">Details</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="face/set-user-id">Set user id</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <ul class="nav navbar-nav navbar-right">
-            <li><a *ngIf="!auth.isAuthenticated()" (click)="auth.login()">Login</a></li>
-            <li><a *ngIf="auth.isAuthenticated()" (click)="auth.logout()">Logout</a></li>
-        </ul>
-    </div>
-</nav>
--->
-
 <main class="container">
     <div class="menu-wrap">
     	<nav class="menu-top">
@@ -52,10 +10,21 @@
     		</div>
     	</nav>
     	<nav class="menu-side">
-    		<a href="#">Home</a>
-    		<a href="#">Detect</a>
-    		<a href="#">Compare</a>
-    		<a href="#">Search</a>
+    		<a routerLink="/" [routerLinkActive]="['active']">Home</a>
+    		<a routerLink="detect" [routerLinkActive]="['active']">Detect</a>
+    		<a routerLink="compare" [routerLinkActive]="['active']">Compare</a>
+    		<a routerLink="search" [routerLinkActive]="['active']">Search</a>
+    		<a routerLink="faceset/list" [routerLinkActive]="['active']">List</a>
+    		<a routerLink="faceset/create" [routerLinkActive]="['active']">Create</a>
+    		<a routerLink="faceset/addface" [routerLinkActive]="['active']">Add Face</a>
+    		<a routerLink="faceset/remove" [routerLinkActive]="['active']">Remove Face</a>
+    		<a routerLink="faceset/update" [routerLinkActive]="['active']">Update</a>
+    		<a routerLink="faceset/details" [routerLinkActive]="['active']">Details</a>
+    		<a routerLink="faceset/delete" [routerLinkActive]="['active']">Delete</a>
+    		<a routerLink="faceset/analyze" [routerLinkActive]="['active']">Analyze</a>
+    		<a routerLink="faceset/set-user-id" [routerLinkActive]="['active']">Set user id</a>
+        <a routerLink="/" *ngIf="!auth.isAuthenticated()" (click)="auth.login()">Login</a>
+        <a routerLink="/" *ngIf="auth.isAuthenticated()" (click)="auth.logout()">Logout</a>
     	</nav>
     </div>
     <div class="content-wrap">
@@ -82,4 +51,7 @@
       </header>
       <router-outlet *ngIf="auth.isAuthenticated()"></router-outlet>
     </div>
+
+    <script src="assets/js/util.js"></script>
+  	<script src="assets/js/main.js"></script>
 </main>
