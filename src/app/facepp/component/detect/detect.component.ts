@@ -17,7 +17,6 @@ export class DetectComponent implements OnInit {
     
     public getDetectInformation(url: string){
         this.detectService.getData(url).subscribe((data) => {
-            console.log(data);
             this.apiResult = data;
         });
     }
