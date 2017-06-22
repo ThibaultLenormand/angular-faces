@@ -80,10 +80,10 @@ body,
 /* Menu */
 .menu-wrap {
 	position: absolute;
+	height: 100%;
+	overflow: scroll;
 	font-weight: 700;
 	opacity: 0;
-	-webkit-transition: opacity 1s;
-	transition: opacity 1s;
 }
 
 .menu-top {
