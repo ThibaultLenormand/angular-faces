@@ -19,10 +19,10 @@
     		<a routerLink="faceset/addface" [routerLinkActive]="['active']">Add Face</a>
     		<a routerLink="faceset/remove" [routerLinkActive]="['active']">Remove Face</a>
     		<a routerLink="faceset/update" [routerLinkActive]="['active']">Update</a>
-    		<a routerLink="faceset/details" [routerLinkActive]="['active']">Details</a>
+    		<a routerLink="face/details" [routerLinkActive]="['active']">Details</a>
     		<a routerLink="faceset/delete" [routerLinkActive]="['active']">Delete</a>
-    		<a routerLink="faceset/analyze" [routerLinkActive]="['active']">Analyze</a>
-    		<a routerLink="faceset/set-user-id" [routerLinkActive]="['active']">Set user id</a>
+    		<a routerLink="face/analyze" [routerLinkActive]="['active']">Analyze</a>
+    		<a routerLink="face/set-user-id" [routerLinkActive]="['active']">Set user id</a>
         <a routerLink="/" *ngIf="!auth.isAuthenticated()" (click)="auth.login()">Login</a>
         <a routerLink="/" *ngIf="auth.isAuthenticated()" (click)="auth.logout()">Logout</a>
     	</nav>
