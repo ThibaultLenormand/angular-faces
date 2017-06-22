@@ -1,3 +1,28 @@
-<p>
-  face-analyze works!
-</p>
+<div id="preview" class="vertical">
+  <div class="inner">
+    <div class="image fit">
+      <img src="images/pic04.jpg" alt="" />
+    </div>
+    <div class="content">
+      <header>
+        <h2>FACE ANALYZE</h2>
+      </header>
+      <p>
+        Upload up to 3 faces and let's analyze them!
+      </p>
+      <div *ngFor="let input of inputs">
+        <input type="url" [(ngModel)]="input.value" [placeholder]="placeholder">
+      </div>
+      <button (click)="addInput()">Add Input</button>
+      <button (click)="send(inputs)">Send</button>
+      <div *ngIf="apiResult" class="result">
+        <ul *ngFor="let input of inputs; let iterator = index">
+          <li>gender: {{ apiResult.faces[iterator].attributes.gender.value }}</li>
+          <li>age: {{ apiResult.faces[iterator].attributes.age.value }}</li>
+          <li>glass: {{ apiResult.faces[iterator].attributes.glass.value }}</li>
+          <li>smile: {{ ((apiResult.faces[iterator].attributes.smile.value > apiResult.faces[iterator].attributes.smile.threshold)?'Yes':'No') }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
