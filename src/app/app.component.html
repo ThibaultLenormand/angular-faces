@@ -38,6 +38,6 @@
           <a (click)="home" class="button hidden"><span>take your picture</span></a>
         </div>
       </header>
-      <router-outlet></router-outlet>
+      <router-outlet *ngIf="auth.isAuthenticated()"></router-outlet>
     </div>
 </main>
