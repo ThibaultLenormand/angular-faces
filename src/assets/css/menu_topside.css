@@ -155,6 +155,7 @@ body,
 .show-menu .menu-button {
 	-webkit-transform: translate3d(300px,0px,0);
 	transform: translate3d(300px,0px,0);
+	opacity: 0.5;
 }
 
 .show-menu .content::before {
