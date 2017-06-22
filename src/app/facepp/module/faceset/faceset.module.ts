@@ -12,12 +12,18 @@ import { FacesetGetFaceSetsComponent } from './component/faceset-get-face-sets/f
 
 import { ROUTES } from './faceset.routes';
 
+
+import { FacesetAddFaceService } from './service/faceset-add-face.service';
+
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forRoot(ROUTES)
   ],
   declarations: [FacesetCreateComponent, FacesetAddFaceComponent, FacesetRemoveFaceComponent, FacesetUpdateComponent, FacesetGetDetailComponent, FacesetDeleteComponent, FacesetGetFaceSetsComponent],
+providers: [
+    FacesetAddFaceService
+]
     
 })
 export class FacesetModule { }
