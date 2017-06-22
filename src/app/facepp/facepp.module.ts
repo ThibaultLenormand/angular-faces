@@ -12,6 +12,8 @@ import { SearchComponent } from './component/search/search.component';
 import { DetectService } from './service/detect.service';
 
 import { ROUTES } from './facepp.routes';
+import {SearchService} from './service/search.service';
+import { SearchResultComponent } from './component/search-result/search-result.component';
 
 @NgModule({
     imports: [
@@ -21,9 +23,10 @@ import { ROUTES } from './facepp.routes';
         FacesetModule,
         HttpModule
     ],
-    declarations: [DetectComponent, CompareComponent, SearchComponent],
+    declarations: [DetectComponent, CompareComponent, SearchComponent, SearchResultComponent],
     providers: [
-        DetectService
+        DetectService,
+        SearchService
     ]
 })
 export class FaceppModule {

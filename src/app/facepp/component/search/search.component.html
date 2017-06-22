@@ -7,7 +7,9 @@
 			<header>
 				<h2>SEARCH</h2>
 			</header>
-			<p>search works!</p>
+      <input #url type="url" placeholder="Face to search URL">
+      <input #faceset type="number" placeholder="Faceset ID">
+      <button (click)="send(url.value)">Send</button>
 		</div>
 	</div>
 	<a href="detail1.html" class="nav previous"><span class="fa fa-chevron-left"></span></a>
