@@ -1,6 +1,5 @@
-import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DetectService } from '../../service/detect.service';
-import { Response } from '@angular/http';
 
 @Component({
   selector: 'app-detect',
@@ -19,10 +18,6 @@ export class DetectComponent implements OnInit {
         this.detectService.getData(url).subscribe((data) => {
             this.apiResult = data;
         });
-    }
-    
-    public displayResult(result: string){
-        
     }
 
     ngOnInit() {
