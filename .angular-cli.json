@@ -19,11 +19,21 @@
             "testTsconfig": "tsconfig.spec.json",
             "prefix": "app",
             "styles": [
-                "styles.css",
-                "assets/css/main.css"
+                "assets/css/main.css",
+                "../node_modules/normalize-css/normalize.css",
+                "assets/css/menu_topside.css",
+                "../node_modules/font-awesome/css/font-awesome.css",
+                "styles.css"
             ],
             "scripts": [
-                "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+                "../node_modules/auth0-js/build/auth0.js",
+                "../node_modules/jquery/dist/jquery.min.js",
+                "assets/js/skel.min.js",
+                "assets/js/util.js",
+                "assets/js/main.js",
+                "assets/js/jquery.poptrox.min.js",
+                "assets/js/menu/classie.js",
+                "assets/js/menu/main.js"
             ],
             "environmentSource": "environments/environment.ts",
             "environments": {
