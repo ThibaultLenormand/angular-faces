@@ -8,10 +8,13 @@
 				<h2>SEARCH</h2>
 			</header>
       <input #url type="url" placeholder="Face to search URL">
-      <input #faceset type="number" placeholder="Faceset ID">
       <button (click)="send(url.value)">Send</button>
+      <div *ngIf="apiResult" class="result">
+        <h3>
+          Resemblance : {{ apiResult.results[0].confidence }}
+        </h3>
+      </div>
 		</div>
 	</div>
-	<a href="detail1.html" class="nav previous"><span class="fa fa-chevron-left"></span></a>
-	<a href="detail2.html" class="nav next"><span class="fa fa-chevron-right"></span></a>
 </div>
+apiResult.results[0].confidence

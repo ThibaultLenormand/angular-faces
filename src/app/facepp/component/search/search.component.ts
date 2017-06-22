@@ -8,13 +8,14 @@ import {SearchService} from '../../service/search.service';
 })
 export class SearchComponent implements OnInit {
   @Input() url: string;
-  @Input() faceset: string;
+  faceset = 4684656178;
+  apiResult;
+
   constructor(public searchService: SearchService) { }
 
   send(url: string, faceset: string) {
     this.searchService.getData(url, faceset).subscribe((data) => {
-      console.log(data.results[0].confidence);
-
+      this.apiResult = data;
     });
   }
 
