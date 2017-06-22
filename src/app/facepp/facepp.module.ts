@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FacesetModule } from './faceset/faceset.module';
+import { FacesetModule } from './module/faceset/faceset.module';
 import { DetectComponent } from './component/detect/detect.component';
 import { CompareComponent } from './component/compare/compare.component';
 import { SearchComponent } from './component/search/search.component';
