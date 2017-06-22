@@ -1,3 +1,22 @@
-<p>
-  face-get-detail works!
-</p>
+<div id="preview" class="vertical">
+  <div class="inner">
+    <div class="image fit">
+      <img src="images/pic04.jpg" alt="" />
+    </div>
+    <div class="content">
+      <header>
+        <h2>FACE DETAILS</h2>
+      </header>
+      <p>
+        Get the geometric detail of your face!
+      </p>
+      <button (click)="send()">Send</button>
+      <div [hidden]="!apiResult" class="result">
+        <canvas id="draw" #draw width="500" height="500"
+                style="border:1px solid #c3c3c3;">
+          Your browser does not support the canvas element.
+        </canvas>
+      </div>
+    </div>
+  </div>
+</div>
