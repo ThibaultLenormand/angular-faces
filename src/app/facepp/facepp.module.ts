@@ -10,6 +10,7 @@ import { CompareComponent } from './component/compare/compare.component';
 import { SearchComponent } from './component/search/search.component';
 
 import { DetectService } from './service/detect.service';
+import { CompareService } from './service/compare.service';
 
 import { ROUTES } from './facepp.routes';
 
@@ -23,7 +24,8 @@ import { ROUTES } from './facepp.routes';
     ],
     declarations: [DetectComponent, CompareComponent, SearchComponent],
     providers: [
-        DetectService
+        DetectService,
+        CompareService
     ]
 })
 export class FaceppModule {

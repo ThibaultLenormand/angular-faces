@@ -1,15 +1,22 @@
 <div id="preview" class="vertical">
 	<div class="inner">
-		<div class="image fit">
-			<img src="images/pic04.jpg" alt="" />
-		</div>
 		<div class="content">
 			<header>
 				<h2>COMPARE</h2>
 			</header>
-			<p>compare works!</p>
+			<input #url1 type="url" placeholder="Image 1 URL">
+			<input #url2 type="url" placeholder="Image 2 URL">
+            <button (click)="getCompareInformation(url1.value, url2.value)">Send</button>
+            <div *ngIf="apiResult" class="result">
+                <ul>
+                    <li>request_id: {{ apiResult.request_id }}</li>
+                    <li>time_used: {{ apiResult.time_used }} ms</li>
+                    <li>confidence: {{ apiResult.confidence }}</li>
+                    <li>thresholds: {{ apiResult.thresholds["1e-3"] }}</li>
+                    <li>thresholds: {{ apiResult.thresholds["1e-4"] }}</li>
+                    <li>thresholds: {{ apiResult.thresholds["1e-5"] }}</li>
+                </ul>
+            </div>
 		</div>
 	</div>
-	<a href="detail1.html" class="nav previous"><span class="fa fa-chevron-left"></span></a>
-	<a href="detail2.html" class="nav next"><span class="fa fa-chevron-right"></span></a>
 </div>
