@@ -1,0 +1,15 @@
+{
+  "faceset_token": "6110df81aff5fd5d20e7d2571b743bac",
+  "time_used": 1721,
+  "face_count": 5,
+  "face_added": 5,
+  "request_id": "1470369312,911b9802-732c-4a4c-a3f4-e2735ab59bc0",
+  "outer_id": "",
+  "failure_detail": [{
+    "reason": "INVALID_FACE_TOKEN",
+    "face_token": "testtest1"
+  }, {
+    "reason": "INVALID_FACE_TOKEN",
+    "face_token": "testtest2"
+  }]
+}
