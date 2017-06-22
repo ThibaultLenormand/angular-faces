@@ -10,10 +10,21 @@
     		</div>
     	</nav>
     	<nav class="menu-side">
-    		<a href="#">Home</a>
-    		<a href="#">Detect</a>
-    		<a href="#">Compare</a>
-    		<a href="#">Search</a>
+    		<a routerLink="/" [routerLinkActive]="['active']">Home</a>
+    		<a routerLink="detect" [routerLinkActive]="['active']">Detect</a>
+    		<a routerLink="compare" [routerLinkActive]="['active']">Compare</a>
+    		<a routerLink="search" [routerLinkActive]="['active']">Search</a>
+    		<a routerLink="faceset/list" [routerLinkActive]="['active']">List</a>
+    		<a routerLink="faceset/create" [routerLinkActive]="['active']">Create</a>
+    		<a routerLink="faceset/addface" [routerLinkActive]="['active']">Add Face</a>
+    		<a routerLink="faceset/remove" [routerLinkActive]="['active']">Remove Face</a>
+    		<a routerLink="faceset/update" [routerLinkActive]="['active']">Update</a>
+    		<a routerLink="faceset/details" [routerLinkActive]="['active']">Details</a>
+    		<a routerLink="faceset/delete" [routerLinkActive]="['active']">Delete</a>
+    		<a routerLink="faceset/analyze" [routerLinkActive]="['active']">Analyze</a>
+    		<a routerLink="faceset/set-user-id" [routerLinkActive]="['active']">Set user id</a>
+        <a routerLink="/" *ngIf="!auth.isAuthenticated()" (click)="auth.login()">Login</a>
+        <a routerLink="/" *ngIf="auth.isAuthenticated()" (click)="auth.logout()">Logout</a>
     	</nav>
     </div>
     <div class="content-wrap">
@@ -40,4 +51,7 @@
       </header>
       <router-outlet *ngIf="auth.isAuthenticated()"></router-outlet>
     </div>
+
+    <script src="assets/js/util.js"></script>
+  	<script src="assets/js/main.js"></script>
 </main>
