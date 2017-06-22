@@ -1,45 +1,43 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Angular Faces</a>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a routerLink="/">Home</a></li>
-                <li [routerLinkActive]="['active']"><a routerLink="detect">Detect</a></li>
-                <li [routerLinkActive]="['active']"><a routerLink="compare">Compare</a></li>
-                <li [routerLinkActive]="['active']"><a routerLink="search">Search</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Faceset <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li [routerLinkActive]="['active']"><a routerLink="faceset/list">List</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="faceset/create">Create</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="faceset/addface">Add Face</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="faceset/remove">Remove Face</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="faceset/update">Update</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="faceset/details">Details</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="faceset/delete">Delete</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Face <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li [routerLinkActive]="['active']"><a routerLink="face/analyze">Analyze</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="face/details">Details</a></li>
-                        <li [routerLinkActive]="['active']"><a routerLink="face/set-user-id">Set user id</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <ul class="nav navbar-nav navbar-right">
-            <li><a *ngIf="!auth.isAuthenticated()" (click)="auth.login()">Login</a></li>
-            <li><a *ngIf="auth.isAuthenticated()" (click)="auth.logout()">Logout</a></li>
-        </ul>
+<main class="container">
+    <div class="menu-wrap">
+    	<nav class="menu-top">
+        <div class="profile"><span>ANGULAR FACES</span></div>
+    		<div class="icon-list">
+    			<a href="#"><i class="fa fa-fw fa-star-o"></i></a>
+    			<a href="#"><i class="fa fa-fw fa-bell-o"></i></a>
+    			<a href="#"><i class="fa fa-fw fa-envelope-o"></i></a>
+    			<a href="#"><i class="fa fa-fw fa-comment-o"></i></a>
+    		</div>
+    	</nav>
+    	<nav class="menu-side">
+    		<a href="#">Home</a>
+    		<a href="#">Detect</a>
+    		<a href="#">Compare</a>
+    		<a href="#">Search</a>
+    	</nav>
     </div>
-</nav>
+    <div class="content-wrap">
+      <!-- Header -->
+      <header *ngIf="!auth.isAuthenticated()" id="header">
+        <div class="inner">
+          <div class="content">
+            <h1>Angular Faces</h1>
+            <a (click)="auth.login()" class="button big alt"><span>Log In</span></a>
+          </div>
+          <a href="#" class="button hidden"><span>Log In</span></a>
+        </div>
+      </header>
 
-<main class="container" *ngIf="auth.isAuthenticated()">
-    <router-outlet></router-outlet>
-</main>
-<main class="container" *ngIf="!auth.isAuthenticated()">
-  You are not logged in! Please <a (click)="auth.login()">Log In</a> to continue.
+      <header *ngIf="auth.isAuthenticated()" id="header" class="hide">
+        <div class="inner">
+          <div class="content">
+            <h1>Angular Faces</h1>
+            <h2></h2>
+            <a (click)="home" class="button big alt"><span>take a picture</span></a>
+          </div>
+          <a (click)="home" class="button hidden"><span>take your picture</span></a>
+        </div>
+      </header>
+      <router-outlet></router-outlet>
+    </div>
 </main>
