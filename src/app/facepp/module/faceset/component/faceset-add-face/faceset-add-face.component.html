@@ -1,22 +1,31 @@
 <div id="preview" class="vertical">
 	<div class="inner">
-		<div class="content">
-			<header>
-				<h2>Faceset add face</h2>
-			</header>
-			<input #facesetToken type="text" placeholder="Faceset token">
-			<input #faceTokens type="text" placeholder="Face tokens">
-            <button (click)="faceSetAddFaceInformation(facesetToken.value, faceTokens.value)">Send</button>
-            <div *ngIf="apiResult" class="result">
-                <ul>
-                    <li>request_id: {{ apiResult.request_id }}</li>
-                    <li>time_used: {{ apiResult.time_used }} ms</li>
-                    <li>faceset_token: {{ apiResult.faceset_token }}</li>
-                    <li>face_count: {{ apiResult.face_count }}</li>
-                    <li>face_added: {{ apiResult.face_added }}</li>
-                    <li>outer_id: {{ apiResult.outer_id }}</li>
-                </ul>
-            </div>
-		</div>
+			<div class="image fit" *ngIf="apiResult">
+				<img src="images/pic04.jpg" alt="" *ngIf="apiResult"/>
+			</div>
+			<div class="content">
+					<header *ngIf="apiResult" class="detect-left">
+							<h2>ADD FACE</h2>
+							<input #facesetToken type="text" placeholder="Faceset token">
+							<input #faceTokens type="text" placeholder="Face tokens">
+							<button (click)="faceSetAddFaceInformation(facesetToken.value, faceTokens.value)">Send</button>
+					</header>
+					<header *ngIf="!apiResult" class="detect-center">
+							<h2>ADD FACE</h2>
+							<input #facesetToken type="text" placeholder="Faceset token">
+							<input #faceTokens type="text" placeholder="Face tokens">
+							<button (click)="faceSetAddFaceInformation(facesetToken.value, faceTokens.value)">Send</button>
+					</header>
+	        <div *ngIf="apiResult" class="result">
+						<p>
+							request_id: {{ apiResult.request_id }}<br>
+							time_used: {{ apiResult.time_used }} ms<br>
+							faceset_token: {{ apiResult.faceset_token }}<br>
+							face_count: {{ apiResult.face_count }}<br>
+							face_added: {{ apiResult.face_added }}<br>
+							outer_id: {{ apiResult.outer_id }}
+						</p>
+	        </div>
+			</div>
 	</div>
 </div>

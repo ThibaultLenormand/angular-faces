@@ -1,18 +1,27 @@
 <div id="preview" class="vertical">
     <div class="inner">
+        <div class="image fit" *ngIf="apiResult">
+          <img src="images/pic04.jpg" alt="" *ngIf="apiResult"/>
+        </div>
         <div class="content">
-            <header>
+          <header *ngIf="apiResult" class="detect-left">
+              <h2>DETECT</h2>
+              <input #url type="url" type="text" placeholder="Image URL">
+              <button (click)="getDetectInformation(url.value)">Send</button>
+          </header>
+            <header *ngIf="!apiResult" class="detect-center">
                 <h2>DETECT</h2>
+                <input #url type="url" type="text" placeholder="Image URL">
+                <button (click)="getDetectInformation(url.value)">Send</button>
             </header>
-            <input #url type="url" placeholder="Image URL">
-            <button (click)="getDetectInformation(url.value)">Send</button>
+
             <div *ngIf="apiResult" class="result">
-                <ul>
-                    <li>gender: {{ apiResult.faces[0].attributes.gender.value }}</li>
-                    <li>age: {{ apiResult.faces[0].attributes.age.value }}</li>
-                    <li>glass: {{ apiResult.faces[0].attributes.glass.value }}</li>
-                    <li>smile: {{ apiResult.faces[0].attributes.smile.value }}</li>
-                </ul>
+              <p>
+                gender: {{ apiResult.faces[0].attributes.gender.value }}<br>
+                age: {{ apiResult.faces[0].attributes.age.value }}<br>
+                glass: {{ apiResult.faces[0].attributes.glass.value }}<br>
+                smile: {{ apiResult.faces[0].attributes.smile.value }}
+              </p>
             </div>
         </div>
     </div>
