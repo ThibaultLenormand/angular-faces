@@ -17,6 +17,7 @@ import { ROUTES } from './faceset.routes';
     CommonModule,
     RouterModule.forRoot(ROUTES)
   ],
-  declarations: [FacesetCreateComponent, FacesetAddFaceComponent, FacesetRemoveFaceComponent, FacesetUpdateComponent, FacesetGetDetailComponent, FacesetDeleteComponent, FacesetGetFaceSetsComponent]
+  declarations: [FacesetCreateComponent, FacesetAddFaceComponent, FacesetRemoveFaceComponent, FacesetUpdateComponent, FacesetGetDetailComponent, FacesetDeleteComponent, FacesetGetFaceSetsComponent],
+    
 })
 export class FacesetModule { }

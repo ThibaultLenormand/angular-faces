@@ -3,13 +3,13 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class Configuration {
   private baseUrl = 'https://api-us.faceplusplus.com/facepp/v3/faceset/';
-  private createApi = 'create/';
-  private addFaceApi = 'addface/';
-  private removeFaceApi = 'removeface/';
-  private updateApi = 'update/';
-  private detailApi = 'getdetail/';
-  private deleteApi = 'delete/';
-  private faceSetsApi = 'getfacesets/';
+  private createApi = 'create';
+  private addFaceApi = 'addface';
+  private removeFaceApi = 'removeface';
+  private updateApi = 'update';
+  private detailApi = 'getdetail';
+  private deleteApi = 'delete';
+  private faceSetsApi = 'getfacesets';
 
   public getCreateApi() {
     return this.baseUrl + this.createApi;

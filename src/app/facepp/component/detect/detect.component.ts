@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DetectService } from '../../service/detect.service';
 
 @Component({
   selector: 'app-detect',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detect.component.css']
 })
 export class DetectComponent implements OnInit {
+    @Input() url: string;
+    
+    constructor(public detectService: DetectService) {
+        
+    }
+    
+    send(url: string){
+        this.detectService.detect(url)
+            .subscribe()
+        ;
+    }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+    ngOnInit() {
+        
+    }
 }

@@ -2,28 +2,28 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Configuration {
-  private APIKey = 'XGXfnP5U681ek5SAVKqoYZq6dJPKoDAj';
-  private APISecret = 'YaV_jwW190GfE2fjBqKSFFprpEtDslhA';
+  private APIKey: string  = 'XGXfnP5U681ek5SAVKqoYZq6dJPKoDAj';
+  private APISecret: string  = 'YaV_jwW190GfE2fjBqKSFFprpEtDslhA';
 
-  private baseUrl = 'https://api-us.faceplusplus.com/facepp/v3/';
-  private detectApi = 'detect/';
-  private compareApi = 'compare/';
-  private searchApi = 'search/';
+  private baseUrl: string  = 'https://api-us.faceplusplus.com/facepp/v3/';
+  private detectApi: string  = 'detect';
+  private compareApi: string  = 'compare';
+  private searchApi: string  = 'search';
 
-  public getAPIKey() {
+  public getAPIKey(): string {
     return this.APIKey;
   }
-  public getAPISecret() {
+  public getAPISecret(): string  {
     return this.APISecret;
   }
 
-  public getDetectApi() {
+  public getDetectApi(): string  {
     return this.baseUrl + this.detectApi;
   }
-  public getCompareApi() {
+  public getCompareApi(): string  {
     return this.baseUrl + this.compareApi;
   }
-  public getSerchApi() {
+  public getSearchApi(): string  {
     return this.baseUrl + this.searchApi;
   }
 }
