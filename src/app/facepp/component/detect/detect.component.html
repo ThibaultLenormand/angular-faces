@@ -1,16 +1,19 @@
 <div id="preview" class="vertical">
-	<div class="inner">
-		<div class="image fit">
-			<img src="images/pic04.jpg" alt="" />
-		</div>
-		<div class="content">
-			<header>
-				<h2>DETECT</h2>
-			</header>
-			<input #url type="url" placeholder="Image URL">
-<button (click)="send(url.value)">Send</button>
-		</div>
-	</div>
-	<a href="detail1.html" class="nav previous"><span class="fa fa-chevron-left"></span></a>
-	<a href="detail2.html" class="nav next"><span class="fa fa-chevron-right"></span></a>
+    <div class="inner">
+        <div class="content">
+            <header>
+                <h2>DETECT</h2>
+            </header>
+            <input #url type="url" placeholder="Image URL">
+            <button (click)="getDetectInformation(url.value)">Send</button>
+            <div *ngIf="apiResult" class="result">
+                <ul>
+                    <li>gender: {{ apiResult.faces[0].attributes.gender.value }}</li>
+                    <li>age: {{ apiResult.faces[0].attributes.age.value }}</li>
+                    <li>glass: {{ apiResult.faces[0].attributes.glass.value }}</li>
+                    <li>smile: {{ apiResult.faces[0].attributes.smile.value }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
