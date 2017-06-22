@@ -4,27 +4,27 @@
             <a class="navbar-brand" href="#">Angular Faces</a>
             <ul class="nav navbar-nav navbar-right">
                 <li><a routerLink="/">Home</a></li>
-                <li><a href="#">Detect</a></li>
-                <li><a href="#">Compare</a></li>
-                <li><a href="#">Search</a></li>
+                <li [routerLinkActive]="['active']"><a routerLink="detect">Detect</a></li>
+                <li [routerLinkActive]="['active']"><a routerLink="compare">Compare</a></li>
+                <li [routerLinkActive]="['active']"><a routerLink="search">Search</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Faceset <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">List</a></li>
-                        <li><a href="#">Create</a></li>
-                        <li><a href="#">Add</a></li>
-                        <li><a href="#">Remove</a></li>
-                        <li><a href="#">Update</a></li>
-                        <li><a href="#">Details</a></li>
-                        <li><a href="#">Delete</a></li>
+                        <li [routerLinkActive]="['active']"><a routerLink="faceset/list">List</a></li>
+                        <li [routerLinkActive]="['active']"><a routerLink="faceset/create">Create</a></li>
+                        <li [routerLinkActive]="['active']"><a routerLink="faceset/addface">Add Face</a></li>
+                        <li [routerLinkActive]="['active']"><a routerLink="faceset/remove">Remove Face</a></li>
+                        <li [routerLinkActive]="['active']"><a routerLink="faceset/update">Update</a></li>
+                        <li [routerLinkActive]="['active']"><a routerLink="faceset/details">Details</a></li>
+                        <li [routerLinkActive]="['active']"><a routerLink="faceset/delete">Delete</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Face <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Analyze</a></li>
-                        <li><a href="#">Details</a></li>
-                        <li><a href="#">Set user id</a></li>
+                        <li [routerLinkActive]="['active']"><a routerLink="face/analyze">Analyze</a></li>
+                        <li [routerLinkActive]="['active']"><a routerLink="face/details">Details</a></li>
+                        <li [routerLinkActive]="['active']"><a routerLink="face/set-user-id">Set user id</a></li>
                     </ul>
                 </li>
             </ul>
