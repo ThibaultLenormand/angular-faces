@@ -1,0 +1,33 @@
+{
+  "time_used": 131,
+  "request_id": "1470475834,61e92c0f-8ba5-4632-9db8-c6701c377e86",
+  "faces": [{
+    "attributes": {
+      "gender": {
+        "value": "Female"
+      },
+      "age": {
+        "value": 21
+      },
+      "glass": {
+        "value": "None"
+      },
+      "headpose": {
+        "yaw_angle": -26.625063,
+        "pitch_angle": 12.921974,
+        "roll_angle": 22.814377
+      },
+      "smile": {
+        "threshold": 30.1,
+        "value": 2.566890001296997
+      }
+    },
+    "face_rectangle": {
+      "width": 198,
+      "top": 139,
+      "left": 93,
+      "height": 198
+    },
+    "face_token": "ba3646996ef97ddaaeede837983ce376"
+  }]
+}
