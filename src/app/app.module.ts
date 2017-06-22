@@ -24,7 +24,7 @@ import { CallbackComponent } from './callback/callback.component';
         FormsModule,
         HttpModule,
         FaceppModule,
-        RouterModule.forRoot(ROUTES, { useHash: true })
+        RouterModule.forRoot(ROUTES)
     ],
     providers: [AuthService],
     bootstrap: [AppComponent]
