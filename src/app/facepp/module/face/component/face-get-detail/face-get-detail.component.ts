@@ -25,7 +25,7 @@ export class FaceGetDetailComponent implements OnInit {
       let yy = data.face_rectangle.height;
       let canvas = this.draw.nativeElement;
       let ctx = canvas.getContext('2d');
-      ctx.fillStyle = '#FF0000';
+      ctx.fillStyle = '#e74c3c';
       ctx.fillRect(xx,xy,yx,yy);
     });
   }
