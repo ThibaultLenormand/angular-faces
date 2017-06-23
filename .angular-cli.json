@@ -20,7 +20,7 @@
             "prefix": "app",
             "styles": [
                 "assets/css/main.css",
-                "../node_modules/normalize.css/normalize.css",
+                "../node_modules/normalize-css/normalize.css",
                 "assets/css/menu_topside.css",
                 "../node_modules/font-awesome/css/font-awesome.css",
                 "styles.css"
