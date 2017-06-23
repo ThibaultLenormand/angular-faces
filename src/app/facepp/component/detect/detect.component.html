@@ -20,7 +20,7 @@
                 gender: {{ apiResult.faces[0].attributes.gender.value }}<br>
                 age: {{ apiResult.faces[0].attributes.age.value }}<br>
                 glass: {{ apiResult.faces[0].attributes.glass.value }}<br>
-                smile: {{ apiResult.faces[0].attributes.smile.value }}
+                smile: {{ (apiResult.faces[0].attributes.smile.value > apiResult.faces[0].attributes.smile.threshold) ? "Yes" : "No" }}
               </p>
             </div>
         </div>
