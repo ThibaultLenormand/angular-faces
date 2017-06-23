@@ -10,19 +10,18 @@
     		</div>
     	</nav>
     	<nav class="menu-side">
-    		<a routerLink="/" [routerLinkActive]="['active']">Home</a>
+    		<a class="disabled" routerLink="/" [routerLinkActive]="['active']">Home</a>
     		<a routerLink="detect" [routerLinkActive]="['active']">Detect</a>
     		<a routerLink="compare" [routerLinkActive]="['active']">Compare</a>
     		<a routerLink="search" [routerLinkActive]="['active']">Search</a>
-    		<a routerLink="faceset/list" [routerLinkActive]="['active']">List</a>
-    		<a routerLink="faceset/create" [routerLinkActive]="['active']">Create</a>
+    		<a class="disabled" routerLink="faceset/list" [routerLinkActive]="['active']">List</a>
+    		<a class="disabled" routerLink="faceset/create" [routerLinkActive]="['active']">Create</a>
     		<a routerLink="faceset/addface" [routerLinkActive]="['active']">Add Face</a>
-    		<a routerLink="faceset/remove" [routerLinkActive]="['active']">Remove Face</a>
-    		<a routerLink="faceset/update" [routerLinkActive]="['active']">Update</a>
+    		<a class="disabled" routerLink="faceset/remove" [routerLinkActive]="['active']">Remove Face</a>
+    		<a class="disabled" routerLink="faceset/update" [routerLinkActive]="['active']">Update</a>
     		<a routerLink="face/details" [routerLinkActive]="['active']">Details</a>
-    		<a routerLink="faceset/delete" [routerLinkActive]="['active']">Delete</a>
+    		<a class="disabled" routerLink="faceset/delete" [routerLinkActive]="['active']">Delete</a>
     		<a routerLink="face/analyze" [routerLinkActive]="['active']">Analyze</a>
-    		<a routerLink="face/set-user-id" [routerLinkActive]="['active']">Set user id</a>
         <a routerLink="/" *ngIf="!auth.isAuthenticated()" (click)="auth.login()">Login</a>
         <a routerLink="/" *ngIf="auth.isAuthenticated()" (click)="auth.logout()">Logout</a>
     	</nav>

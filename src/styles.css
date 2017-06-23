@@ -2,3 +2,11 @@
 .btn-margin {
   margin-top: 7px
 }
+
+a.disabled{
+    color: #e74c3c;
+    opacity: 0.5;
+}
+.menu-side a.disabled:hover {
+    color: #e74c3c;
+}
