@@ -9,11 +9,15 @@ import {FaceAnalyzeService} from '../../service/face-analyze.service';
 export class FaceAnalyzeComponent implements OnInit {
 
   placeholder = 'Image URL';
+  limit = 3;
   inputs = [{value: ''}];
   apiResult = false;
   addInput()  {
-    this.inputs.push({value: ''});
-    this.apiResult = false;
+    if (this.limit > 0) {
+      this.inputs.push({value: ''});
+      this.apiResult = false;
+      this.limit--;
+    }
   }
 
   constructor(public faceAnalyzeService: FaceAnalyzeService) { }

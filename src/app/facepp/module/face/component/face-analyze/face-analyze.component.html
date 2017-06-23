@@ -1,14 +1,14 @@
 <div id="preview" class="vertical">
   <div class="inner" *ngIf="apiResult" >
-      <div class="image fit" *ngFor="let input of inputs">
-        <img src="images/pic04.jpg" alt="" />
+      <div class="image fit" *ngFor="let input of inputs; let i = index">
+        <img src="{{'images/pics0'+(i)+'.jpg'}}" alt="" />
       </div>
     </div>
   <div class="inner">
     <div class="content">
       <header class="detect-center">
         <h2>FACE ANALYZE</h2>
-        <p>Upload up to 3 faces and let's analyze them!</p>
+        <p>Upload up to 4 faces and let's analyze them!</p>
         <div *ngFor="let input of inputs">
           <input type="url" [(ngModel)]="input.value" type="text" [placeholder]="placeholder">
         </div>
