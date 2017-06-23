@@ -9,23 +9,23 @@
 	</div>
 	<div class="inner">
 		<div class="content">
-					<header class="detect-center">
-						<h2>COMPARE</h2>
-						<input #url1 type="url" type="text" placeholder="Image 1 URL">
-						<input #url2 type="url" type="text" placeholder="Image 2 URL">
-						<button (click)="getCompareInformation(url1.value, url2.value)">Send</button>
-					</header>
+				<header class="detect-center">
+					<h2>COMPARE</h2>
+					<input #url1 type="url" type="text" placeholder="Image 1 URL">
+					<input #url2 type="url" type="text" placeholder="Image 2 URL">
+					<button (click)="getCompareInformation(url1.value, url2.value)">Send</button>
+				</header>
 
-					<div *ngIf="apiResult" class="result">
-							<p>
-								request_id: {{ apiResult.request_id }}<br>
-								time_used: {{ apiResult.time_used }} ms<br>
-								confidence: {{ apiResult.confidence }}<br>
-								thresholds: {{ apiResult.thresholds["1e-3"] }}<br>
-								thresholds: {{ apiResult.thresholds["1e-4"] }}<br>
-								thresholds: {{ apiResult.thresholds["1e-5"] }}
-							</p>
-					</div>
+				<div *ngIf="apiResult" class="result">
+						<p>
+							request_id: {{ apiResult.request_id }}<br>
+							time_used: {{ apiResult.time_used }} ms<br>
+							confidence: {{ apiResult.confidence }}<br>
+							thresholds: {{ apiResult.thresholds["1e-3"] }}<br>
+							thresholds: {{ apiResult.thresholds["1e-4"] }}<br>
+							thresholds: {{ apiResult.thresholds["1e-5"] }}
+						</p>
+				</div>
 		</div>
 	</div>
 </div>

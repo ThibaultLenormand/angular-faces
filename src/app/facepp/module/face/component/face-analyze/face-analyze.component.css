@@ -40,6 +40,9 @@ div.result p {
 }
 
 #preview .content {
-  padding-top: 0;
   padding-bottom: 0;
+}
+
+#preview .result .content {
+  padding-top: 0;
 }
